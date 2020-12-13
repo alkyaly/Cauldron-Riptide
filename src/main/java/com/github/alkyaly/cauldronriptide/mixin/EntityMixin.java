@@ -32,6 +32,6 @@ public abstract class EntityMixin {
         World world = getEntityWorld();
         BlockPos pos = getBlockPos();
         BlockState state = world.getBlockState(pos);
-        return world.getBlockState(getBlockPos()).isOf(Blocks.CAULDRON) && state.get(CauldronBlock.LEVEL) > 0;
+        return world.getBlockState(getBlockPos()).isOf(Blocks.CAULDRON) && state.get(CauldronBlock.LEVEL) > 0; // ← Fix that when 1.17 deploys
     }
 }
