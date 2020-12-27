@@ -29,9 +29,7 @@ public abstract class EntityMixin {
     }
 
     private boolean isEntityInsideCauldron() {
-        World world = getEntityWorld();
-        BlockPos pos = getBlockPos();
-        BlockState state = world.getBlockState(pos);
-        return world.getBlockState(getBlockPos()).isOf(Blocks.CAULDRON) && state.get(CauldronBlock.LEVEL) > 0; // ← Fix that when 1.17 deploys
+        BlockState state = getEntityWorld().getBlockState(getBlockPos());
+        return state.isOf(Blocks.CAULDRON) && state.get(CauldronBlock.LEVEL) > 0; // ← Fix that when 1.17 deploys
     }
 }
