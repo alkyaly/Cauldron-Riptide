@@ -23,7 +23,7 @@ public abstract class EntityMixin {
 
     @Shadow public abstract World getEntityWorld();
 
-    @Inject(method = "isTouchingWaterOrRain", at = @At("INVOKE"), cancellable = true)
+    @Inject(method = "isTouchingWaterOrRain", at = @At("HEAD"), cancellable = true)
     private void isTouchingWaterOrRain(CallbackInfoReturnable<Boolean> info) {
         info.setReturnValue(isTouchingWater() || isBeingRainedOn() || isEntityInsideCauldron());
     }
