@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Cauldron Riptide",
-  "description": "Use trident enchantment, Riptide, inside a water-filled cauldron",
+  "description": "Use a trident with the enchantment Riptide inside cauldrons filled with Water!",
   "authors": [ "alkyaLy" ],
   "contact": {
     "sources": "https://github.com/alkyaly/Cauldron-Riptide",
@@ -17,7 +17,8 @@
   "mixins": [ "cauldron-riptide.mixins.json" ],
 
   "depends": {
-    "fabricloader": ">=0.7.4",
-    "minecraft": ">=1.16.2"
+    "fabricloader": "*",
+    "minecraft": ">=1.17",
+    "java": ">=16"
   }
 }
